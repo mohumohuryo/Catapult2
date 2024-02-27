@@ -502,7 +502,7 @@ MonoBehaviour:
   audio: {fileID: 5488191870734999568}
   clip:
   - {fileID: 8300000, guid: e8a4ddf7291af6a4882a37dea095e1aa, type: 3}
-  volume: 0.4
+  volume: 0.5
   randomPlaySE: 0
 --- !u!82 &5488191870734999568
 AudioSource:
@@ -1084,7 +1084,7 @@ MonoBehaviour:
   audio: {fileID: 3907556464006356727}
   clip:
   - {fileID: 8300000, guid: e8a4ddf7291af6a4882a37dea095e1aa, type: 3}
-  volume: 0.4
+  volume: 0.5
   randomPlaySE: 0
 --- !u!82 &3907556464006356727
 AudioSource:

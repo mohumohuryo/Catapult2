@@ -123,7 +123,7 @@ public class GameManager : MonoBehaviour
         else
         {
             //ゲームクリアシーンに遷移する
-            SceneManager.LoadScene("ClearScene");
+           SceneManager.LoadScene("ClearScene");
         }
     }
 
@@ -153,43 +153,18 @@ public class GameManager : MonoBehaviour
 
 
     /// <summary>
-    /// タイトルシーンに遷移する
+    /// シーン遷移とフェードアウト
     /// </summary>
-    public IEnumerator TitleScene()
+    /// <param name="sceneName">遷移したいシーンの名前</param>
+    /// <returns></returns>
+    public IEnumerator TransiteSceneWithFade(string sceneName)
     {
         //フェードアウト
         yield return uIManager.FadeOut();
 
-        //タイトルシーンに遷移する
-        SceneManager.LoadScene("TitleScene");
-    }
+        //シーン遷移する
+        SceneManager.LoadScene(sceneName);
 
-
-
-    /// <summary>
-    /// フェードアウトした後、GamePlaySceneに遷移する
-    /// </summary>
-    public IEnumerator GamePlayScene()
-    {
-        //フェードアウト
-        yield return uIManager.FadeOut();
-
-        //ゲームが遊べるシーンに遷移する
-        SceneManager.LoadScene("GamePlayScene");
-    }
-
-
-
-    /// <summary>
-    /// ゲームクリアシーンに遷移する
-    /// </summary>
-    public IEnumerator ClearScene()
-    {
-        //フェードアウト
-        yield return uIManager.FadeOut();
-
-        //ゲームクリアシーンに遷移する
-        SceneManager.LoadScene("ClearScene");
     }
 
 

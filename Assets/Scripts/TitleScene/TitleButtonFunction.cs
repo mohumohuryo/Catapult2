@@ -57,7 +57,7 @@ public class TitleButtonFunction : MonoBehaviour
     public void OnClickGamePlaySceneTransition()
     {
         //フェードアウトした後、GamePlaySceneに遷移する
-        StartCoroutine(gameManager.GamePlayScene());
+        StartCoroutine(gameManager.TransiteSceneWithFade("GamePlayScene"));
     }
 
 

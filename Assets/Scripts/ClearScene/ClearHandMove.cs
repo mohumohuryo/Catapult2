@@ -66,6 +66,6 @@ public class ClearHandMove : MonoBehaviour
         yield return new WaitForSeconds(TimeToTransition);
 
         //タイトルシーンに遷移する
-        StartCoroutine(gameManager.TitleScene());
+        StartCoroutine(gameManager.TransiteSceneWithFade("TitleScene"));
     }
 }

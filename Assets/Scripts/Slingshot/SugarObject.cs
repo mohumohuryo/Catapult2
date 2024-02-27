@@ -2,15 +2,22 @@
 
 public class SugarObject : MonoBehaviour
 {
+    [Header("X軸の消える範囲指定"), SerializeField]
+    float xDisappearPoint;
 
-    //コライダーに接触したときの処理
-    private void OnCollisionEnter(Collision collision)
+    [Header("Y軸の消える範囲指定"), SerializeField]
+    float yDisappearPoint;
+
+
+
+    private void Update()
     {
-        //画面外の壁に当たると
-        if (collision.gameObject.CompareTag("SugarRemoval"))
+        //画面外に出るとオブジェクトを消す
+        if(xDisappearPoint<=transform.position.x||-xDisappearPoint>=transform.position.x||yDisappearPoint<=transform.position.y||-yDisappearPoint>=transform.position.y)
         {
-            //自オブジェクト消す
             Destroy(gameObject);
         }
     }
+
+
 }

@@ -15,6 +15,11 @@ public class SoundSettings : MonoBehaviour
     [Header("スライダーで調整したいAudioMixerのGroup名"), SerializeField]
     string mixerGroupName;
 
+
+
+
+
+
     private void Start()
     {
         //スライダーにMixerの値をセットする
@@ -22,11 +27,14 @@ public class SoundSettings : MonoBehaviour
 
     }
 
+
+
+
     /// <summary>
     /// スライダーのvalueの値をMixerのvolumeに代入する（対数スケール）
     /// </summary>
     /// <param name="volume"></param>
-    public void SetMixer(float volume)
+    public void SetVolume(float volume)
     {
         //ルート求める
         volume = Mathf.Sqrt(volume);
@@ -37,6 +45,9 @@ public class SoundSettings : MonoBehaviour
         //AudioMixerに音量を設定する
         audioMixer.SetFloat(mixerGroupName, db);
     }
+
+
+
 
     /// <summary>
     /// スライダーのvalueにMixerのVolumeの値を代入する（対数スケール）
